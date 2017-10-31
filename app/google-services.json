@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "521055696556",
+    "firebase_url": "https://cashgo-fcd37.firebaseio.com",
+    "project_id": "cashgo-fcd37",
+    "storage_bucket": "cashgo-fcd37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521055696556:android:ff7528c251c2451e",
+        "android_client_info": {
+          "package_name": "com.learnacad.cashgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521055696556-bqj6qihjpr50g9be94nlh074s5kn7bce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.learnacad.cashgo",
+            "certificate_hash": "c7d70f805ca8fc1382e2d04720d6fb5957bd88b9"
+          }
+        },
+        {
+          "client_id": "521055696556-2bmrcol8f0qbu33i0ukeb9kcr3ah9s4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXDo0nZR9s_5_-2an48fXa4C98l2jiMOg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521055696556-2bmrcol8f0qbu33i0ukeb9kcr3ah9s4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

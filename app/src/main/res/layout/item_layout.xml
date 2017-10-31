@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="10dp"
+    android:layout_margin="10dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/itemImageView"
+            android:src="@mipmap/ic_launcher"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:layout_margin="5dp"
+                    android:id="@+id/nameOftheRestaurantItemTextView"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/nameOftheRestaurantItemTextView"
+                    android:text="details of the offer that the above restaurant is providing"
+                    android:id="@+id/detailsOftheOfferItemTextView"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detailsOftheOfferItemTextView"
+                    android:text="amt"
+                    android:layout_margin="10dp"
+                    android:id="@+id/originalPriceItemTextView" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detailsOftheOfferItemTextView"
+                    android:text="Damt"
+                    android:layout_margin="10dp"
+                    android:id="@+id/discountPriceItemTextView"
+                    android:layout_toEndOf="@+id/originalPriceItemTextView"/>
+
+
+            </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
