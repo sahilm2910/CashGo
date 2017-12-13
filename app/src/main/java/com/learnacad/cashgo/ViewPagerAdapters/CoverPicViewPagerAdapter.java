@@ -2,7 +2,7 @@ package com.learnacad.cashgo.ViewPagerAdapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.learnacad.cashgo.Fragments.Cafe;
 import com.learnacad.cashgo.Fragments.FoodDrinksCover;
@@ -14,7 +14,7 @@ import com.learnacad.cashgo.Fragments.ThingsToDo;
  * Created by Sahil Malhotra on 16-09-2017.
  */
 
-public class CoverPicViewPagerAdapter extends FragmentPagerAdapter {
+public class CoverPicViewPagerAdapter extends FragmentStatePagerAdapter {
 
 
     public CoverPicViewPagerAdapter(FragmentManager fm) {

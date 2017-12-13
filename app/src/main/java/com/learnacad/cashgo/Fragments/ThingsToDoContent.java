@@ -32,7 +32,7 @@ public class ThingsToDoContent extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.contentRecyclerViewList);
         titles = new ArrayList<>();
-        contentFragmentAdapter = new ContentFragmentAdapter(getActivity(),titles);
+        contentFragmentAdapter = new ContentFragmentAdapter(getActivity(),titles,"td");
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(contentFragmentAdapter);
         fetchTitles();
@@ -45,7 +45,7 @@ public class ThingsToDoContent extends Fragment {
 
         for(int i = 0; i < 5; ++i){
 
-            titles.add("Title" + " " + i);
+            titles.add("Thing to do " + i+1);
         }
         contentFragmentAdapter.notifyDataSetChanged();
     }

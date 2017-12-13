@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerHorizontal="true"
-    android:background="@drawable/registerback">
+    android:background="@drawable/loginback">
 
 
     <TextView
@@ -16,6 +16,7 @@
         android:fontFamily="casual"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="8sp"
+        android:visibility="gone"
         android:paddingTop="10dp"
         android:text="Welcome to CashGo.\nIt seems you ain't a part of our family.\nPlease fill the form below."
         android:textAlignment="center"
@@ -27,7 +28,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="100dp"
         android:layout_below="@+id/logoImageView">
 
         <LinearLayout
@@ -61,8 +62,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"
-                    android:fontFamily="casual"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:hint="Full Name"
+                    android:inputType="textPersonName"
                     android:textColor="@color/cardview_light_background"
                     android:textColorHint="@color/cardview_light_background"
                     android:textColorLink="@android:color/white"
@@ -106,7 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"
-                    android:fontFamily="casual"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/cardview_light_background"
@@ -124,6 +126,7 @@
             android:id="@+id/refLL4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/refLL2"
             android:orientation="horizontal"
             android:paddingEnd="15dp"
@@ -153,9 +156,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"
-                    android:fontFamily="casual"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:hint="Mobile Number"
                     android:inputType="number"
+                    android:maxLength="10"
                     android:textColor="@color/cardview_light_background"
                     android:textColorHint="@color/cardview_light_background"
                     android:textColorLink="@android:color/white"
@@ -174,7 +178,7 @@
             android:orientation="horizontal"
             android:paddingEnd="15dp"
             android:paddingStart="15dp"
-            android:layout_centerVertical="true"
+            android:layout_below="@id/refLL4"
             android:layout_alignParentStart="true">
 
             <ImageView
@@ -201,7 +205,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"
-                    android:fontFamily="casual"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:hint="DD-MM-YYYY"
                     android:inputType="date"
                     android:textColor="@color/cardview_light_background"
@@ -252,7 +256,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="26dp"
             android:background="@drawable/login_button"
-            android:fontFamily="casual"
+            android:fontFamily="sans-serif-smallcaps"
             android:paddingStart="5dp"
             android:text="Register"
             android:textAlignment="center"

@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:id="@+id/itemImageView"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@drawable/food"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -29,36 +29,45 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Title"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:id="@+id/nameOftheRestaurantItemTextView"
                     android:textColor="@color/cardview_dark_background"
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detailsOftheOfferItemTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
                     android:layout_below="@+id/nameOftheRestaurantItemTextView"
-                    android:text="details of the offer that the above restaurant is providing"
-                    android:id="@+id/detailsOftheOfferItemTextView"/>
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Amazing offer description"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/detailsOftheOfferItemTextView"
-                    android:text="amt"
-                    android:layout_margin="10dp"
+                    android:text="Original Amount 100"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:id="@+id/originalPriceItemTextView" />
 
 
                 <TextView
+                    android:id="@+id/st"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/detailsOftheOfferItemTextView"
-                    android:text="Damt"
-                    android:layout_margin="10dp"
-                    android:id="@+id/discountPriceItemTextView"
-                    android:layout_toEndOf="@+id/originalPriceItemTextView"/>
+                    android:layout_below="@+id/originalPriceItemTextView"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Cashback of 10%" />
 
 
             </RelativeLayout>

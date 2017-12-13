@@ -13,9 +13,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.learnacad.cashgo.Models.SharedPrefManager;
 import com.learnacad.cashgo.Models.User;
 import com.learnacad.cashgo.R;
 
@@ -33,6 +35,7 @@ public class UserDataEntryActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     String email,name,dob,mobile,password;
     ProgressDialog pDialog;
+    SharedPrefManager sharedPrefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +44,11 @@ public class UserDataEntryActivity extends AppCompatActivity {
 
         pDialog = new ProgressDialog(this);
         this.setTitle("Register");
+        this.getSupportActionBar().hide();
 
 
-        nameEditText = (TextInputEditText) findViewById(R.id.editTextNameRegisterActivity);
+
+          nameEditText = (TextInputEditText) findViewById(R.id.editTextNameRegisterActivity);
           emailEditText = (TextInputEditText) findViewById(R.id.editTextEmailRegisterActivity);
           dobEditText = (TextInputEditText) findViewById(R.id.editTextDOBNumRegisterActivity);
           mobileNumEditText = (TextInputEditText) findViewById(R.id.editTextmobileNumRegisterActivity);
@@ -57,6 +62,8 @@ public class UserDataEntryActivity extends AppCompatActivity {
         emailEditText.setText(email);
         emailEditText.setClickable(false);
         emailEditText.setEnabled(false);
+        sharedPrefManager = new SharedPrefManager(this);
+
 
         final ArrayList<String> genders = new ArrayList<>();
         genders.add("Male");
@@ -83,6 +90,7 @@ public class UserDataEntryActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
+                gender = "Others";
             }
         });
 
@@ -120,11 +128,16 @@ public class UserDataEntryActivity extends AppCompatActivity {
                 dobEditText.setText("");
                 spinner.setSelection(0,true);
                 String userId = mDatabase.push().getKey();
-                User user = new User(userId,name,mobile,email,dob,password,gender);
+
+                sharedPrefManager.setUserId(userId);
+                sharedPrefManager.setUserName(name);
+
+                User user = new User(userId,name,mobile,email,dob,gender);
                 mDatabase.child(userId).setValue(user);
                 hideDialog();
                 Log.d("pasword",password);
-                startActivity(new Intent(UserDataEntryActivity.this,HomeActivity.class));
+                Toast.makeText(UserDataEntryActivity.this, "Registered Successfully.Please login to proceed.", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(UserDataEntryActivity.this,LoginActivity.class));
 
             }
         });

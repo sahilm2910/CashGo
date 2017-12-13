@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,13 +22,31 @@ public class HomeHoldingFragment extends Fragment {
 
     ViewPager coverPicViewPager;
     ViewPager contentViewPager;
+    View view;
     TabLayout tabLayout;
     private static String[] tabTitles = {"FOOD & DRINKS","SPAS","SALON","THINGS TO DO","CAFE"};
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.home_layout,container,false);
+
+
+
+        if(view != null){
+
+            ViewGroup parent = (ViewGroup) view.getParent();
+            if(parent != null){
+
+                parent.removeView(view);
+            }
+        }
+        try{
+
+            view = inflater.inflate(R.layout.home_layout,container,false);
+        }catch (InflateException e){
+
+        }
+
 
         contentViewPager = (ViewPager) view.findViewById(R.id.homeListContentViewPager);
         coverPicViewPager = (ViewPager) view.findViewById(R.id.coverPicViewPager);

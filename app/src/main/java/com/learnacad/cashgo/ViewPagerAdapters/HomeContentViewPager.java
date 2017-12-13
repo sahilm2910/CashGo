@@ -2,7 +2,7 @@ package com.learnacad.cashgo.ViewPagerAdapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.learnacad.cashgo.Fragments.CafeContent;
 import com.learnacad.cashgo.Fragments.FoodDrinksContent;
@@ -14,7 +14,7 @@ import com.learnacad.cashgo.Fragments.ThingsToDoContent;
  * Created by Sahil Malhotra on 16-09-2017.
  */
 
-public class HomeContentViewPager extends FragmentPagerAdapter {
+public class HomeContentViewPager extends FragmentStatePagerAdapter {
 
     public HomeContentViewPager(FragmentManager fm) {
         super(fm);

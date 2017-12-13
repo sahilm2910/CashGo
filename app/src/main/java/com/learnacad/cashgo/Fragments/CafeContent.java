@@ -32,7 +32,7 @@ public class CafeContent extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.contentRecyclerViewList);
         titles = new ArrayList<>();
-        contentFragmentAdapter = new ContentFragmentAdapter(getActivity(),titles);
+        contentFragmentAdapter = new ContentFragmentAdapter(getActivity(),titles,"cafe");
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(contentFragmentAdapter);
         fetchTitles();
@@ -45,7 +45,7 @@ public class CafeContent extends Fragment {
 
         for(int i = 0; i < 5; ++i){
 
-            titles.add("Title" + " " + i);
+            titles.add("Cafe " + i+1);
         }
         contentFragmentAdapter.notifyDataSetChanged();
     }

@@ -38,6 +38,8 @@ public class SignUpActivity extends AppCompatActivity {
         pDialog = new ProgressDialog(this);
         this.setTitle("Sign Up");
         mAuth = FirebaseAuth.getInstance();
+        this.getSupportActionBar().hide();
+
 
         emailEditText = (TextInputEditText) findViewById(R.id.loginEmailEditText);
         passwordEditText = (TextInputEditText) findViewById(R.id.loginPasswordEditText);
