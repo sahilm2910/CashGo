@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.01"
+        android:text="        You can see your coupons here"
+        android:textSize="20dp" />
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:textSize="20dp"
+        android:text="          1. Jaypee_Cafe@128 Coupon" />
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:textSize="20dp"
+        android:text="          2. Domino's Pizza Coupon" />
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:textSize="20dp"
+        android:text="          3. KFC Chicken Coupon" />
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.06"
+        android:textSize="20dp"
+        android:text="         4. Pizza Hut online " />
+
+</LinearLayout>
